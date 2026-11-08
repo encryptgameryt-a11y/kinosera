@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0f">
+  <meta name="description" content="KINOSERA — discover films and series worth staying in for.">
+  <title>KINOSERA — Stories worth staying in for</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Kinosera home"><span class="brand-mark">K</span><span>KINO<span class="brand-light">SERA</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a class="active" href="#home">Discover</a><a href="#trending">Trending</a><a href="#library">My List</a></nav>
+    <div class="top-actions"><label class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg><input id="searchInput" type="search" placeholder="Titles, genres..." autocomplete="off"></label><button class="avatar" aria-label="Profile">K</button></div>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-art" aria-hidden="true"><div class="hero-orb"></div><div class="hero-haze"></div><div class="hero-silhouette"></div><div class="hero-grain"></div></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> THE KINOSERA COLLECTION <span class="eyebrow-line"></span> FEATURED PICK</div>
+        <p class="hero-kicker">A WORLD BEYOND THE EVERYDAY</p>
+        <h1>Find your<br><em>next</em> obsession.</h1>
+        <p class="hero-copy">Big-screen feeling. Stories that stay with you. Explore a handpicked universe of films and series.</p>
+        <div class="hero-buttons"><a class="primary-btn" href="#trending"><span>Explore titles</span><span class="arrow">↗</span></a><a class="quiet-btn" href="#about">What is Kinosera?</a></div>
+        <div class="hero-foot"><span>01 — CURATED DISCOVERY</span><span>MADE FOR THE LOVE OF STORIES</span></div>
+      </div>
+      <div class="hero-side-note">YOUR NEXT FAVORITE IS OUT THERE.</div>
+    </section>
+    <section class="section" id="trending">
+      <div class="section-heading"><div><p class="section-label">A GOOD PLACE TO START</p><h2>Explore the <em>unmissable.</em></h2></div><div class="section-tools"><span id="resultCount">06 TITLES</span><a href="#library" class="text-link">Your watchlist <span>↗</span></a></div></div>
+      <div class="filters" id="filters"><button class="filter active" data-filter="All">All titles</button><button class="filter" data-filter="Film">Films</button><button class="filter" data-filter="Series">Series</button><button class="filter" data-filter="Sci-Fi">Sci-Fi</button><button class="filter" data-filter="Drama">Drama</button><button class="filter" data-filter="Thriller">Thriller</button></div>
+      <div class="movie-grid" id="movieGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>No titles found. Try another search.</div>
+    </section>
+    <section class="watchlist-section" id="library"><div><p class="section-label">KEEP THEM CLOSE</p><h2>Your personal <em>shortlist.</em></h2><p class="watchlist-copy">Save the stories you want to come back to. Your list stays on this device.</p></div><div class="saved-strip" id="savedStrip"><span class="saved-empty">Your watchlist is waiting for its first story.</span></div></section>
+    <section class="about" id="about"><span class="about-index">K / 001</span><div><p class="section-label">A NOTE FROM KINOSERA</p><h2>Less scrolling.<br><em>More feeling.</em></h2></div><p>KINOSERA is a film and television discovery experience built around the joy of finding something worth watching. This is the beginning: a considered interface, a growing catalogue, and a better way to explore stories.</p></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">K</span><span>KINO<span class="brand-light">SERA</span></span></a><span>AN INDEPENDENT DISCOVERY CONCEPT</span><span>© <span id="year"></span> KINOSERA</span></footer>
+  <dialog id="detailDialog" class="detail-dialog"><button class="dialog-close" id="dialogClose" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
