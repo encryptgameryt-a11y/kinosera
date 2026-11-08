@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="KINOSERA — a considered universe of films and series. Find the story you have been looking for.">
+  <title>KINOSERA — Stories worth staying for</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://image.tmdb.org">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="KINOSERA home">
+      <span class="brand-mark">K</span>
+      <span class="brand-name">KINO<span>SERA</span></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-link is-active" data-view="all">Discover</button>
+      <button class="nav-link" data-view="film">Films</button>
+      <button class="nav-link" data-view="series">Series</button>
+      <button class="nav-link" data-view="list">My List <span class="list-count" id="listCount">0</span></button>
+    </nav>
+
+    <div class="top-actions">
+      <button class="icon-button search-toggle" id="searchToggle" aria-label="Open search" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+      </button>
+      <label class="search-field" id="searchField">
+        <span class="sr-only">Search films and series</span>
+        <input id="searchInput" type="search" placeholder="Search titles, genres..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <button class="profile-button" id="profileToggle" aria-expanded="false" aria-label="Guest profile">
+        <span class="profile-label">GUEST</span><span class="profile-avatar">K</span>
+      </button>
+      <div class="profile-menu" id="profileMenu" hidden>
+        <strong>Guest profile</strong>
+        <span>Your list is saved on this device.</span>
+        <span class="profile-menu-note">Accounts are coming later.</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-backdrop" role="img" aria-label="Dune: Part Two cinematic desert backdrop"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-content">
+        <div class="hero-overline"><span class="overline-rule"></span> THE KINOSERA EDIT <span class="overline-dot"></span> FEATURED STORY</div>
+        <p class="hero-kicker">A FILM BY DENIS VILLENEUVE</p>
+        <h1 id="heroTitle">DUNE <span>PART TWO</span></h1>
+        <div class="hero-meta">
+          <span>2024</span><i></i><span>FILM</span><i></i><span>2H 47M</span><i></i><span>SCI-FI</span>
+        </div>
+        <p class="hero-description">Destiny is written in the sand. Paul Atreides unites with Chani and the Fremen on a journey that will decide the fate of the universe.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="heroDetails"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7z"></path></svg> Explore title</button>
+          <button class="button button-secondary" id="heroSave"><span class="button-plus">+</span><span id="heroSaveText">My List</span></button>
+        </div>
+      </div>
+      <div class="hero-index"><span>01</span><span class="hero-index-line"></span><span>FEATURED</span></div>
+      <div class="hero-bottom-note">A BETTER WAY TO FIND WHAT MOVES YOU.</div>
+    </section>
+
+    <div class="page-content">
+      <section class="welcome-strip">
+        <div>
+          <p class="eyebrow">YOUR NEXT GREAT WATCH STARTS HERE</p>
+          <h2>Find a story.<br><em>Feel something.</em></h2>
+        </div>
+        <p class="welcome-copy">A handpicked universe of films and series. Explore by mood, follow a curiosity, and keep the stories you want close.</p>
+      </section>
+
+      <section class="discovery-tools" aria-label="Browse catalogue">
+        <div class="browse-heading">
+          <div><p class="eyebrow">MAKE IT A MOOD</p><h2>Browse your way</h2></div>
+          <span id="catalogueCount">10 STORIES</span>
+        </div>
+        <div class="genre-chips" id="genreChips">
+          <button class="genre-chip is-active" data-genre="All">All titles</button>
+          <button class="genre-chip" data-genre="Sci-Fi">Mind-bending</button>
+          <button class="genre-chip" data-genre="Thriller">Edge of your seat</button>
+          <button class="genre-chip" data-genre="Drama">Character-driven</button>
+          <button class="genre-chip" data-genre="Adventure">Big worlds</button>
+          <button class="genre-chip" data-genre="Animation">Animation</button>
+        </div>
+      </section>
+
+      <section class="search-view" id="searchView" hidden>
+        <div class="section-heading"><div><p class="eyebrow">THE KINOSERA INDEX</p><h2 id="searchHeading">Search results</h2></div><span id="searchCount"></span></div>
+        <div class="poster-grid" id="searchGrid"></div>
+        <div class="empty-state" id="searchEmpty" hidden><span class="empty-mark">K</span><h3>No stories found.</h3><p>Try another title, genre, or a shorter search.</p></div>
+      </section>
+
+      <section class="catalogue" id="catalogue">
+        <div id="railsRoot"></div>
+        <div class="empty-state list-empty" id="listEmpty" hidden>
+          <span class="empty-mark">K</span><h3>Your list is still a blank page.</h3>
+          <p>Save the films and series you want to come back to. They will be waiting here.</p>
+          <button class="button button-primary" id="backToDiscover">Explore the catalogue</button>
+        </div>
+      </section>
+
+      <section class="about-band">
+        <div class="about-monogram">K<span>/</span>S</div>
+        <div><p class="eyebrow">A NOTE FROM KINOSERA</p><h2>Less scrolling.<br><em>More feeling.</em></h2></div>
+        <p>KINOSERA is an independent discovery experience for people who love a good story. We are here to make the search feel as rewarding as the watch.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">K</span><span class="brand-name">KINO<span>SERA</span></span></a>
+    <div class="footer-links"><a href="#top">Back to top ↑</a><a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">Artwork sources: TMDB + partners ↗</a></div>
+    <p>© <span id="year"></span> KINOSERA <span class="footer-divider">/</span> STORIES WORTH STAYING FOR</p>
+    <small>Artwork and metadata are for discovery purposes. KINOSERA is not endorsed or certified by TMDB.</small>
+  </footer>
+
+  <dialog class="detail-dialog" id="detailDialog" aria-labelledby="detailTitle">
+    <button class="dialog-close" id="dialogClose" aria-label="Close details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
