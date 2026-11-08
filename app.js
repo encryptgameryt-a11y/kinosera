@@ -37,7 +37,7 @@ const titles = [
     id: 5, title: "The Bear", year: 2022, type: "Series", runtime: "4 seasons",
     genres: ["Drama", "Comedy"], label: "CHARACTER-DRIVEN",
     description: "A young chef returns to Chicago to run his family's sandwich shop. In the heat of the kitchen, grief, ambition and an unlikely team collide.",
-    poster: "https://image.tmdb.org/t/p/w500/9kwgN5FiJqQJ6GKhaLMNRakYzeG.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
     tmdb: "https://www.themoviedb.org/tv/136315-the-bear",
     a: "#5f4632", b: "#191619", glow: "#d99a56", symbol: "C"
   },
