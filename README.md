@@ -21,7 +21,7 @@ Open index.html in a browser, or serve this directory with any static file serve
 
 ## Deployment
 
-This is a static HTML/CSS/JavaScript site. For Cloudflare Pages, use the repository root as the build output directory and leave the build command blank. If Git integration is enabled for the production branch, pushes to main can trigger a deployment.
+This repository contains the static frontend source. It does not currently include a Wrangler configuration or an automated deployment workflow. Pushing to main updates the GitHub source; it does not by itself prove that an existing Cloudflare Worker has been redeployed. Publish the updated files through the deployment configuration attached to the target hosting project. For a separate Cloudflare Pages project, use the repository root as the build output directory and leave the build command blank.
 
 ## Catalogue and artwork
 
